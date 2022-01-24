@@ -87,9 +87,8 @@ call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:norm_subtle, "fg": s:bg })
 call s:h("Comment",       {"fg": s:bg_subtle_comment})
 call s:h("Constant",      {"fg": s:bg_subtle_comment})
-call s:h("Identifier",    {"fg": s:norm, "cterm": "bold", "gui": "bold"})
+call s:h("Identifier",    {"fg": s:red})
 call s:h("Statement",     {"fg": s:norm, "cterm": "bold", "gui": "bold"})
-call s:h("PreProc",       {"fg": s:red})
 call s:h("Type",          {"fg": s:norm_subtle})
 
 hi! link Character        Normal
@@ -107,6 +106,7 @@ hi! link Operator         Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
+hi! link PreProc          Statement
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
