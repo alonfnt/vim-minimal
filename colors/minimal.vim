@@ -23,24 +23,24 @@ let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
-let s:light_gray      = { "gui": "#B2B2B2", "cterm": "249" }
-let s:lighter_gray    = { "gui": "#C6C6C6", "cterm": "251" }
-let s:subtle_gray     = { "gui": "#696969", "cterm": "250" }
+let s:light_gray      = { "gui": "#3d3d3d", "cterm": "249" }
+let s:lighter_gray    = { "gui": "#666666", "cterm": "251" }
+let s:subtle_gray     = { "gui": "#666666", "cterm": "250" }
 let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
-let s:dark_red        = { "gui": "#b80707", "cterm": "1"   }
-let s:light_red       = { "gui": "#b80707", "cterm": "1"   }
-let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
-let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
-let s:dark_blue       = { "gui": "#1850d1", "cterm": "4"   }
-let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
-let s:light_blue      = { "gui": "#b6d6fd", "cterm": "153" }
-let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
-let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
+let s:dark_red        = { "gui": "#901a1E", "cterm": "1"   }
+let s:light_red       = { "gui": "#c73028", "cterm": "1"   }
+let s:orange          = { "gui": "#dB3B0A", "cterm": "167" }
+let s:darker_blue     = { "gui": "#122947", "cterm": "18"  }
+let s:dark_blue       = { "gui": "#425570", "cterm": "4"   }
+let s:blue            = { "gui": "#bac7d9", "cterm": "12"  }
+let s:light_blue      = { "gui": "#b7d7de", "cterm": "153" }
+let s:dark_cyan       = { "gui": "#0a5963", "cterm": "6"   }
+let s:light_cyan      = { "gui": "#197f8e", "cterm": "14"  }
+let s:dark_green      = { "gui": "#39641c", "cterm": "2"   }
+let s:light_green     = { "gui": "#4b8325", "cterm": "10"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
+let s:yellow          = { "gui": "#ffbd38", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
@@ -48,7 +48,7 @@ if &background == "dark"
   let s:bg_subtle       = s:light_black
   let s:bg_subtle_comment = s:subtle_gray
   let s:bg_very_subtle  = s:subtle_black
-  let s:norm            = s:lighter_gray
+  let s:norm            = s:white
   let s:norm_subtle     = s:light_gray
   let s:purple          = s:light_purple
   let s:cyan            = s:light_cyan
@@ -83,7 +83,7 @@ function! s:h(group, style)
 endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:norm_subtle, "fg": s:bg })
+call s:h("Cursor",        {"bg": s:blue, "fg": s:bg })
 call s:h("Comment",       {"fg": s:bg_subtle_comment})
 call s:h("Constant",      {"fg": s:bg_subtle_comment})
 call s:h("Identifier",    {"fg": s:red})
